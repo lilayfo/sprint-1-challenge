@@ -256,9 +256,9 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(artistArrayName) {
-  let artistC = JSON.parse(JSON.stringify(artists));//creating a copy of the artists array, but is this correct?
-  a0 = [(artistC[0]['name']), (artistC[1]['name']), (artistC[2]['name']), (artistC[3]['name']), (artistC[4]['name']), (artistC[5]['name']),(artistC[6]['name']), (artistC[7]['name']),(artistC[8]['name']), (artistC[9]['name']),(artistC[10]['name']),(artistC[11]['name']),(artistC[12]['name']),(artistC[13]['name']),(artistC[14]['name']),(artistC[15]['name']),(artistC[16]['name']),(artistC[17]['name']),(artistC[18]['name']),(artistC[19]['name'])];
+function listOfNames(artistArray2) {
+  var artistC = JSON.parse(JSON.stringify(artistArray2));//creating a copy of the artists array, but is this correct?
+  var a0 = [(artistC[0]['name']), (artistC[1]['name']), (artistC[2]['name']), (artistC[3]['name']), (artistC[4]['name']), (artistC[5]['name']),(artistC[6]['name']), (artistC[7]['name']),(artistC[8]['name']), (artistC[9]['name']),(artistC[10]['name']),(artistC[11]['name']),(artistC[12]['name']),(artistC[13]['name']),(artistC[14]['name']),(artistC[15]['name']),(artistC[16]['name']),(artistC[17]['name']),(artistC[18]['name']), (artistC[19]['name'])];
  
   
   console.log(a0);
@@ -266,9 +266,9 @@ function listOfNames(artistArrayName) {
   
 }
 
+listOfNames(artists)
 
 
-//console logs correctly but it crashes the test suite
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -280,12 +280,14 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(artistArray2, number) {
-  
+function removeArtist(artistArray3, number) {
+ /* var arrayMinusOne = artistArray3
+
+  return arrayMinusOne */
 }
 
+//console.log(removeArtist());
 
------------------*/
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive the artist array as an argument passed from the FIRST parameter 
