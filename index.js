@@ -209,17 +209,20 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-
+var artistName = artists[0].name;
+console.log(artistName);
 
 //(2) Bio of the third artist (2nd index) in the array 
 
-
+var artistBio = artists[2].bio;
+console.log(artistBio);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
-
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -230,10 +233,19 @@ Use getArtistByIndex to do the following:
 
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(artistArray, index) { //argument is the value that gets passed into the parameter
+  var string1 = 'the artist at index ';
+  var string2 = JSON.stringify(artistArray[index].id);
+  var string3 = ' is ';
+  var string4 = artistArray[index].name
+  
+ 
+  
+ var finalString = string1.concat(string2, string3, string4);
+  return finalString;
 }
 
+console.log(getArtistByIndex(artists, 0))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -244,10 +256,19 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function listOfNames(artistArrayName) {
+  let artistC = JSON.parse(JSON.stringify(artists));//creating a copy of the artists array, but is this correct?
+  a0 = [(artistC[0]['name']), (artistC[1]['name']), (artistC[2]['name']), (artistC[3]['name']), (artistC[4]['name']), (artistC[5]['name']),(artistC[6]['name']), (artistC[7]['name']),(artistC[8]['name']), (artistC[9]['name']),(artistC[10]['name']),(artistC[11]['name']),(artistC[12]['name']),(artistC[13]['name']),(artistC[14]['name']),(artistC[15]['name']),(artistC[16]['name']),(artistC[17]['name']),(artistC[18]['name']),(artistC[19]['name'])];
+ 
+  
+  console.log(a0);
+  return a0;
+  
 }
 
+
+
+//console logs correctly but it crashes the test suite
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -259,12 +280,12 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(artistArray2, number) {
+  
 }
 
 
-
+-----------------*/
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive the artist array as an argument passed from the FIRST parameter 
@@ -281,8 +302,8 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(artistArray3, sName, sYears, sGenre, sNationality, aBio) {
+  
 }
 
 
