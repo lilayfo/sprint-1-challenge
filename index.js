@@ -246,7 +246,7 @@ function getArtistByIndex(artistArray, index) { //argument is the value that get
 }
 
 console.log(getArtistByIndex(artists, 0))//so it knows that artistArray = artists because artists is the first thing getting passed in when the function is called
-
+//PASSING
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use listOfNames to do the following: 
@@ -268,7 +268,7 @@ function listOfNames(artistArray2) {
 
 listOfNames(artists)
 
-
+//PASSING
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -286,13 +286,16 @@ function removeArtist(artistArray3, number) {
   //remove an element from array based on index
   let arrayMinusOne = [...artistArray3];
   //spreading over artistArray3
-  delete arrayMinusOne[number];
   
+ arrayMinusOne.splice(number, 1);
+ 
   console.log(arrayMinusOne);
-  return arrayMinusOne 
+  return arrayMinusOne;
+  
 }
 
-removeArtist(artists, 0);//Why is this not passing the test???
+removeArtist(artists, 1);
+//PASSING
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -311,7 +314,13 @@ Use addArtist to do the following:
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
 function addArtist(artistArray4, sName, sYears, sGenre, sNationality, sBio) {
-  
+  let arrayPlusOne = [...artistArray4];
+  const newArtist = {name: sName, years: sYears, genre: sGenre, nationality: sNationality, bio: sBio};
+  arrayPlusOne.push(newArtist);
+
+  console.log(arrayPlusOne);
+  return arrayPlusOne
+
 }
 
 
@@ -341,13 +350,16 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(artistArray6, aName){
-  
-  //var nameSearched = artistArray6[aName].name;
+  //for (let i = 0; i < artistArray6.length; i++){
+    //for loops and map
+    //solve this one first
+  }
+  //var nameSearched = artistArray6[aName]['name'];
   //var bioByName = nameSearched.bio;
 
 //console.log(bioByName);
  //return bioByName
-}
+//}
 
 artistInfo(artists, 'Frida Kahlo'); 
 
