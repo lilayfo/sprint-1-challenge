@@ -322,7 +322,7 @@ function addArtist(artistArray4, sName, sYears, sGenre, sNationality, sBio) {
   return arrayPlusOne
 
 }
-
+//PASSED
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -333,10 +333,19 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(artistArray5) {
+  //let arrayTask7 = [...artistArray5];
+  const filteredArr = [];
+  for (let index = 0; index < artistArray5.length; index++){ 
+  if (artistArray5[index]['paintings'] > 100){
+    filteredArr.push(artistArray5[index].name);
+    
+  }
 }
-
+return filteredArr
+  
+}
+console.log(lotsOfArt(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
