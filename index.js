@@ -361,16 +361,12 @@ Use artistInfo to do the following:
 function artistInfo(artistArray6, aName){
   
   let artBio = [];
-  for (let i = 0; i < artistArray6.length; i++){
-    if (aName === artistArray6[i]['name']){
-      artBio.push(artistArray6[i].bio);
-
-
+  for (let i = 0; i < artistArray6.length; i++){//looping through the whole artists array
+    if (aName === artistArray6[i]['name']){//here I am checking if the second value passed in is equal to any of the names and if it is:
+      artBio.push(artistArray6[i].bio);//pushing the bio of the artist at that index into the empty array created at the top
     }
-    
   }
-
-return artBio.toString()
+return artBio.toString()//now I am returning the array in string form
 }
 artistInfo(artists, 'Frida Kahlo'); 
 
@@ -384,18 +380,19 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(artistArray7, stringNat){}
-/*const filteredNat = [];
+function artistByCountry(artistArray7, stringNat){
+const filteredNat = [];
 for (let i = 0; i < artistArray7.length; i++){ 
-  if (artistArray7[i]['nationality'] === stringNat){
+  if (stringNat === artistArray7[i]['nationality']){
     filteredNat.push(artistArray7[i].name);
   }
- return filteredNat
+ 
 }
+return filteredNat
 }
-console.log(artistByCountry(artists, "Spanish"));
+console.log(artistByCountry(artists, "Spanish"))
 
-*/
+
 /* ***** END OF TASKS ***** */
 
 
