@@ -359,17 +359,19 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(artistArray6, aName){
-  //for (let i = 0; i < artistArray6.length; i++){
-    //for loops and map
-    //solve this one first
+  
+  let artBio = [];
+  for (let i = 0; i < artistArray6.length; i++){
+    if (aName === artistArray6[i]['name']){
+      artBio.push(artistArray6[i].bio);
+
+
+    }
+    
   }
-  //var nameSearched = artistArray6[aName]['name'];
-  //var bioByName = nameSearched.bio;
 
-//console.log(bioByName);
- //return bioByName
-//}
-
+return artBio.toString()
+}
 artistInfo(artists, 'Frida Kahlo'); 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -382,12 +384,18 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(artistArray7, stringNat){
-
+function artistByCountry(artistArray7, stringNat){}
+/*const filteredNat = [];
+for (let i = 0; i < artistArray7.length; i++){ 
+  if (artistArray7[i]['nationality'] === stringNat){
+    filteredNat.push(artistArray7[i].name);
+  }
+ return filteredNat
 }
+}
+console.log(artistByCountry(artists, "Spanish"));
 
-
-
+*/
 /* ***** END OF TASKS ***** */
 
 
